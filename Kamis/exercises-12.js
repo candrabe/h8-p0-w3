@@ -1,5 +1,5 @@
 /*
-* Logic Challenge - Tentukan Deret Geometri\
+* Logic Challenge - Tentukan Deret Geometri
 * Diberikan sebuah function tentukanDeretGeometri(arr) yang menerima satu parameter berupa array yang terdiri dari angka.
 * Function tersebut akan mengembalikan true jika array dari parameter tersebut merupakan deret geometri.
 * Deret geometri adalah sebuah deret dimana perbedaan setiap angka di deret tersebut konsisten secara perkalian.
