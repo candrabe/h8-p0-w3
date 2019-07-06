@@ -8,7 +8,7 @@
 function perkalianUnik(arr) {
     let panjang = arr.length;
     let angka = 1;
-    let new_arr = [];
+    let newArr = [];
 
     for (let i = 0; i < panjang; i++) {
         for (let j = 0; j < panjang; j++) {
@@ -17,15 +17,15 @@ function perkalianUnik(arr) {
             }
         }
 
-        new_arr.push(angka);
+        newArr.push(angka);
         angka = 1;
 
         if(panjang === 1){
-            new_arr.pop();
+            newArr.pop();
         }
     }
 
-    return new_arr;
+    return newArr;
 }
 
 // TEST CASES

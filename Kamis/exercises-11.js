@@ -10,7 +10,8 @@ function tentukanDeretAritmatika(arr) {
     let panjang = arr.length;
     let status = true;
 
-    if (panjang === 1) {
+    // Karena untuk menentukan deret minimal terdapat 3 angka.
+    if (panjang < 3) {
         status = false;
     }
     
