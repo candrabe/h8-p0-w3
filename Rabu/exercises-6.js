@@ -7,21 +7,47 @@
 * Contoh, jika angka adalah 8, walaupun dia sudah palindrome, harus mencari angka selanjutnya yang palindrome, yaitu 9.
 */
 
-function angkaPalindrome(num) {
-    let kata = num + 1;
-    kata = kata.toString();
-    let panjang = kata.length;
-    let kata_terbalik = '';
+// Ini solusi menggunakan rekursiv
+// function angkaPalindrome(num) {
+//     let kata = num + 1;
+//     kata = kata.toString();
+//     let panjang = kata.length;
+//     let kataTerbalik = '';
     
-    for(let i = panjang-1; i >= 0; i--){
-        kata_terbalik += kata[i];
+//     for(let i = panjang-1; i >= 0; i--){
+//         kataTerbalik += kata[i];
+//     }
+
+//     if(kata === kataTerbalik){
+//         return kata;
+//     } else {
+//         return angkaPalindrome(Number(kata));
+//     }
+// }
+
+// Ini solusi tanpa rekursiv
+function angkaPalindrome(num) {
+    let loop = true;
+    let panjang, kata, kataTerbalik;
+
+    while (loop) {
+        kata = num;
+        kata = kata.toString();
+        panjang = kata.length;
+        kataTerbalik = '';
+
+        for(let i = panjang-1; i >= 0; i--){
+            kataTerbalik += kata[i];
+        }
+
+        if(kata === kataTerbalik){
+            loop = false;
+        } else {
+            num++;
+        }
     }
 
-    if(kata === kata_terbalik){
-        return kata;
-    } else {
-        return angkaPalindrome(Number(kata));
-    }
+    return num;
 }
 
 // TEST CASES

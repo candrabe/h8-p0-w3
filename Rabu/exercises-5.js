@@ -8,13 +8,13 @@
 
 function palindrome(kata) {
     let panjang = kata.length;
-    let kata_terbalik = '';
+    let kataTerbalik = '';
 
     for(let i = panjang-1; i >= 0; i--){
-        kata_terbalik += kata[i];
+        kataTerbalik += kata[i];
     }
 
-    if(kata === kata_terbalik){
+    if(kata === kataTerbalik){
         return true;
     } else {
         return false;

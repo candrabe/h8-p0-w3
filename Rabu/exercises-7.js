@@ -6,7 +6,6 @@
 */
 
 function hitungJumlahKata(kalimat) {
-    let jumlah = 0;
     let arr = [];
     let tampung = '';
 
