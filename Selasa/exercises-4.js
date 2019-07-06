@@ -3,6 +3,9 @@
 * Array pada JavaScript memiliki sekumpulan built-in function yang digunakan untuk mempermudah developer untuk mengolah data di dalamnya.
 * Beberapa fungsi yang sering digunakan antara lain join, split, slice, splice, dan sort.
 * Kerjakanlah tantangan ini untuk memperkuat pengertian kamu tentang built-in function tersebut.
+* Objectives
+* - Mengerti Kegunaan dari Built-in Function yang dimiliki Array
+* - Mampu Menggunakan Built-in Function yang dimiliki Array
 */
 
 function dataHandling2(arr) {
@@ -11,55 +14,55 @@ function dataHandling2(arr) {
     console.log(arr);
 
     var tanggal = arr[3].split('/');
-    var nama_bulan = '';
+    var namaBulan = '';
     
     switch (Number(tanggal[1])) {
         case 1: 
-            nama_bulan = 'Januari';
+            namaBulan = 'Januari';
             break;
         case 2:
-            nama_bulan = 'Februari';
+            namaBulan = 'Februari';
             break;
         case 3:
-            nama_bulan = 'Maret';
+            namaBulan = 'Maret';
             break;
         case 4:
-            nama_bulan = 'April';
+            namaBulan = 'April';
             break;
         case 5:
-            nama_bulan = 'Mei';
+            namaBulan = 'Mei';
             break;
         case 6:
-            nama_bulan = 'Juni';
+            namaBulan = 'Juni';
             break;
         case 7:
-            nama_bulan = 'Juli';
+            namaBulan = 'Juli';
             break;
         case 8:
-            nama_bulan = 'Agustus';
+            namaBulan = 'Agustus';
             break;
         case 9:
-            nama_bulan = 'September';
+            namaBulan = 'September';
             break;
         case 10:
-            nama_bulan = 'Oktober';
+            namaBulan = 'Oktober';
             break;
         case 11:
-            nama_bulan = 'November';
+            namaBulan = 'November';
             break;
         case 12:
-            nama_bulan = 'Desember';
+            namaBulan = 'Desember';
             break;
     
         default:
             break;
     }
-    console.log(nama_bulan);
+    console.log(namaBulan);
     tanggal.sort(function(value1, value2) { return value2 - value1 });
     console.log(tanggal);
     
-    var tanggal_strip = arr[3].split('/');
-    console.log(tanggal_strip.join('-'));
+    var tanggalStrip = arr[3].split('/');
+    console.log(tanggalStrip.join('-'));
     console.log(arr[1].slice(0,14));
 }
 
