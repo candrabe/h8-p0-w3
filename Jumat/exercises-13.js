@@ -8,28 +8,31 @@
 
 function targetTerdekat(arr) {
     let panjang = arr.length;
-    let jarakTerpendek = 0;
-    let tmpJarak = 0;
-    let start = false;
+    let jarakTerdekat = 0;
+    let arrO = [];
+    let arrX = [];
 
     for (let i = 0; i < panjang; i++) {
-        if ( start ) {
-            tmpJarak += 1;
+        if(arr[i] === 'o'){
+            arrO.push(i);
+        } else if (arr[i] === 'x') {
+            arrX.push(i);
         }
-
-        if (arr[i] === 'o') {
-            tmpJarak = 0;
-            start = true;
-        }
-
-        if ( (start && (arr[i] === 'x')) ) {
-            start = false;
-            jarakTerpendek = tmpJarak;
-            tmpJarak = 0;
+    }
+    
+    for (let i = 0; i < arrO.length; i++) {
+        for (let j = 0; j < arrX.length; j++) {
+            if (jarakTerdekat === 0) {
+                jarakTerdekat = Math.abs(arrO[i] - arrX[j]);
+            } else {
+                if ( (Math.abs(arrO[i] - arrX[j])) < jarakTerdekat ) {
+                    jarakTerdekat = Math.abs(arrO[i] - arrX[j]);
+                }
+            }
         }
     }
 
-    return jarakTerpendek;
+    return jarakTerdekat;
 }
 
 // TEST CASES

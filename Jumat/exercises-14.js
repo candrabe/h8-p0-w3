@@ -10,26 +10,26 @@
 
 function mengelompokkanAngka(arr) {
     let panjang = arr.length;
-    let arr_genap = [];
-    let arr_ganjil = [];
-    let arr_kelipatan = [];
+    let arrGenap = [];
+    let arrGanjil = [];
+    let arrKelipatan = [];
 
     for (let i = 0; i < panjang; i++) {
         if (arr[i] % 3 == 0) {
             // Kelipatan 3
-            arr_kelipatan.push(arr[i]);
+            arrKelipatan.push(arr[i]);
         } else {
             if (arr[i] % 2 == 0) {
                 // Genap
-                arr_genap.push(arr[i]);
+                arrGenap.push(arr[i]);
             } else {
                 // Ganjil
-                arr_ganjil.push(arr[i]);
+                arrGanjil.push(arr[i]);
             }
         }
     }
 
-    return [arr_genap, arr_ganjil, arr_kelipatan];
+    return [arrGenap, arrGanjil, arrKelipatan];
 }
 
 // TEST CASES

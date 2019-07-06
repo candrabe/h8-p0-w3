@@ -9,29 +9,55 @@
 * Urutan hewan dalam array setiap pengelompokan huruf tidak penting.
 */
 
-function groupAnimals(animals) {
-    let arr = [];
-    let new_arr = [];
-    // Sort
-    animals = animals.sort();
+// Solusi 1: Menggunakan associative array
+// function groupAnimals(animals) {
+//     let arr = [];
+//     let finalArr = [];
+//     // Sort
+//     animals = animals.sort();
 
+//     let panjang = animals.length;
+
+//     for (let i = 0; i < panjang; i++) {
+//         if ( arr[animals[i][0]] === undefined ) {
+//             arr[animals[i][0]] = [];
+//             arr[animals[i][0]].push(animals[i]);
+//         } else {
+//             arr[animals[i][0]].push(animals[i]);
+//         }
+//     }
+
+//     for (let key in arr) {
+//         finalArr.push(arr[key]);
+//     }
+
+//     return finalArr;
+// }
+
+// Solusi 2: Tanpa menggunakan associative array
+function groupAnimals(animals) {
+    animals = animals.sort();
     let panjang = animals.length;
-    let tes = '';
+    let arr = [];
+    let finalArr = [];
+    let initial = animals[0][0];
 
     for (let i = 0; i < panjang; i++) {
-        if ( arr[animals[i][0]] === undefined ) {
-            arr[animals[i][0]] = [];
-            arr[animals[i][0]].push(animals[i]);
+        if (initial === animals[i][0]) {
+            arr.push(animals[i]);
+
+            if (i === (panjang - 1)) {
+                finalArr.push(arr);
+            }
         } else {
-            arr[animals[i][0]].push(animals[i]);
+            finalArr.push(arr);
+            arr = [];
+            arr.push(animals[i]);
+            initial = animals[i][0];
         }
     }
 
-    for (let key in arr) {
-        new_arr.push(arr[key]);
-    }
-
-    return new_arr;
+    return finalArr;
 }
 
 // TEST CASES
