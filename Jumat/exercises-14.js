@@ -15,11 +15,11 @@ function mengelompokkanAngka(arr) {
     let arrKelipatan = [];
 
     for (let i = 0; i < panjang; i++) {
-        if (arr[i] % 3 == 0) {
+        if (arr[i] % 3 === 0) {
             // Kelipatan 3
             arrKelipatan.push(arr[i]);
         } else {
-            if (arr[i] % 2 == 0) {
+            if (arr[i] % 2 === 0) {
                 // Genap
                 arrGenap.push(arr[i]);
             } else {
