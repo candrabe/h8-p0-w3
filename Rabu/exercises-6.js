@@ -29,13 +29,13 @@
 function angkaPalindrome(num) {
     let loop = true;
     let panjang, kata, kataTerbalik;
-
+    num++;
     while (loop) {
         kata = num;
         kata = kata.toString();
         panjang = kata.length;
         kataTerbalik = '';
-
+        
         for(let i = panjang-1; i >= 0; i--){
             kataTerbalik += kata[i];
         }
